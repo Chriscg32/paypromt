@@ -1,0 +1,33 @@
+{
+  "info": {
+    "name": "PayPrompt API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "OAuth Callback",
+      "request": {
+        "method": "GET",
+        "url": "{{base_url}}/api/oauth/callback?code=TEST_CODE"
+      }
+    },
+    {
+      "name": "Sync Invoices",
+      "request": {
+        "method": "POST",
+        "url": "{{base_url}}/api/invoices/sync"
+      }
+    },
+    {
+      "name": "Send Reminder",
+      "request": {
+        "method": "POST",
+        "url": "{{base_url}}/api/reminders/send",
+        "body": {
+          "mode": "raw",
+          "raw": "{\"invoice_id\": \"test-invoice\"}"
+        }
+      }
+    }
+  ]
+}

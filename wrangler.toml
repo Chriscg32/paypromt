@@ -1,0 +1,12 @@
+name = "payprompt"
+main = "backend/src/worker.js"
+compatibility_date = "2024-05-01"
+workers_dev = true
+
+[triggers]
+crons = ["0 * * * *"] # Runs every hour
+
+[[d1_databases]]
+binding = "DB"
+database_name = "payprompt"
+database_id = "<D1_DATABASE_ID>"
